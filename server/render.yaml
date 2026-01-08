@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: meen-kadai-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
+    plan: starter
+    region: singapore
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: meen-kadai-db
+          property: connectionString
+      - key: STORE_CORS
+        value: https://your-frontend-domain.com,http://localhost:3000
+      - key: ADMIN_CORS
+        value: https://your-frontend-domain.com,http://localhost:3000
+      - key: AUTH_CORS
+        value: https://your-frontend-domain.com,http://localhost:3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: PORT
+        value: 9000
+
+databases:
+  - name: meen-kadai-db
+    databaseName: meenkadai
+    user: meenkadai
+    plan: starter
+    region: singapore
