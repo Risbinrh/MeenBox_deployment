@@ -41,7 +41,7 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 medusa
 
 # Copy necessary files from builder
-COPY --from=builder --chown=medusa:nodejs /app/dist ./dist
+COPY --from=builder --chown=medusa:nodejs /app/.medusa ./.medusa
 COPY --from=builder --chown=medusa:nodejs /app/medusa-config.ts ./
 COPY --from=builder --chown=medusa:nodejs /app/package*.json ./
 COPY --from=builder --chown=medusa:nodejs /app/node_modules ./node_modules
