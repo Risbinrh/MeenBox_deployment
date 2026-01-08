@@ -1,7 +1,8 @@
 import { ExecArgs } from "@medusajs/framework/types"
+import ZoneModuleService from "../modules/zone/service"
 
 export default async function seedZones({ container }: ExecArgs) {
-    const zoneModuleService = container.resolve("zone")
+    const zoneModuleService = container.resolve("zone") as ZoneModuleService
 
     console.log("🗺️  Seeding delivery zones...")
 
