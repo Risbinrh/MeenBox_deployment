@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -53,7 +53,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { t } from '@/lib/translations';
 
 
-export default function ProfilePage() {
+function ProfilePageContent() {
   const router = useRouter();
   const { language } = useLanguage();
   const { customer, isAuthenticated, isLoading, logout, updateProfile, refreshCustomer } = useAuth();
@@ -1174,5 +1174,20 @@ export default function ProfilePage() {
         </DialogContent>
       </Dialog >
     </div >
+  );
+}
+
+export default function ProfilePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="animate-pulse text-center">
+          <div className="h-12 w-12 mx-auto bg-[#b18b5e]/20 rounded-full mb-4"></div>
+          <div className="h-4 w-32 bg-gray-200 rounded mx-auto"></div>
+        </div>
+      </div>
+    }>
+      <ProfilePageContent />
+    </Suspense>
   );
 }

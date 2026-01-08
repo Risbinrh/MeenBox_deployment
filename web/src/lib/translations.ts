@@ -49,6 +49,7 @@ export const translations = {
         // Home Sections
         shopByCategory: 'Shop by Category',
         MeenboxFromEveryCategory: 'Fresh catch from every category',
+        freshCatchFromEveryCategory: 'Fresh catch from every category',
         todaysMeenbox: "Today's Fresh Catch",
         caughtFreshThisMorning: 'Caught fresh this morning',
         viewAll: 'View All',
@@ -445,6 +446,7 @@ export const translations = {
         // Home Sections
         shopByCategory: 'வகையின் படி வாங்குங்கள்',
         MeenboxFromEveryCategory: 'ஒவ்வொரு வகையிலும் புதிய வேட்டை',
+        freshCatchFromEveryCategory: 'ஒவ்வொரு வகையிலும் புதிய வேட்டை',
         todaysMeenbox: 'இன்றைய புதிய வேட்டை',
         caughtFreshThisMorning: 'இன்று காலையில் புதிதாக பிடிக்கப்பட்டது',
         viewAll: 'அனைத்தையும் பார்க்க',
