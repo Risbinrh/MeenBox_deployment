@@ -23,7 +23,7 @@ module.exports = defineConfig({
   },
   modules: [
     {
-      resolve: "./.medusa/server/modules/zone",
+      resolve: "./src/modules/zone",
     },
   ],
 })
