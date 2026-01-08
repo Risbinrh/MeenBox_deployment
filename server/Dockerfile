@@ -9,8 +9,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production && \
+# Install ALL dependencies (including dev) for build
+RUN npm install && \
     npm cache clean --force
 
 # Build stage
@@ -25,6 +25,9 @@ COPY . .
 
 # Build the application
 RUN npm run build
+
+# Prune dev dependencies after build
+RUN npm prune --omit=dev
 
 # Production stage
 FROM base AS runner
@@ -41,7 +44,7 @@ RUN addgroup --system --gid 1001 nodejs && \
 COPY --from=builder --chown=medusa:nodejs /app/dist ./dist
 COPY --from=builder --chown=medusa:nodejs /app/medusa-config.ts ./
 COPY --from=builder --chown=medusa:nodejs /app/package*.json ./
-COPY --from=deps --chown=medusa:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=medusa:nodejs /app/node_modules ./node_modules
 
 # Copy source files needed at runtime
 COPY --from=builder --chown=medusa:nodejs /app/src ./src
