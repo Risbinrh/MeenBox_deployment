@@ -449,7 +449,7 @@ export default function OrderDetailPage() {
                         : item.title}
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    {t('qty', language)}: {item.quantity}
+                    {t('qty', language)}: {item.quantity / 2} kg
                   </p>
                   <p className="font-bold text-primary mt-1">{formatPrice(item.total || item.unit_price * item.quantity * 2)}</p>
                 </div>

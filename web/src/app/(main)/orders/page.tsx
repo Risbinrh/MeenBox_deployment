@@ -203,7 +203,7 @@ function OrdersContent() {
                     {(order.items?.length || 0) > 1 && ` +${(order.items?.length || 0) - 1} ${t('more', language)}`}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {order.items?.length || 0} {(order.items?.length || 0) === 1 ? t('items', language) : t('items', language)}
+                    {t('qty', language)}: {(order.items?.reduce((sum, item) => sum + (item.quantity || 0), 0) / 2)} kg
                   </p>
                 </div>
               </div>
