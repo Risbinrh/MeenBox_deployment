@@ -48,8 +48,8 @@ import { t } from '@/lib/translations';
 
 const statusConfig: Record<string, { labelKey: keyof typeof import('@/lib/translations').translations.en; color: string; bgColor: string; textColor: string; icon: React.ElementType }> = {
   'order_placed': { labelKey: 'orderPlaced', color: 'bg-amber-500', bgColor: 'bg-amber-50', textColor: 'text-amber-700', icon: Clock },
-  'order_confirmed': { labelKey: 'confirmed', color: 'bg-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10', textColor: 'text-[#b18b5e]', icon: CheckCircle },
-  'shipped': { labelKey: 'shipped', color: 'bg-[#8c6b42]', bgColor: 'bg-[#8c6b42]/10', textColor: 'text-[#8c6b42]', icon: Package },
+  'order_confirmed': { labelKey: 'confirmed', color: 'bg-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10', textColor: 'text-[#00bcd4]', icon: CheckCircle },
+  'shipped': { labelKey: 'shipped', color: 'bg-[#0097a7]', bgColor: 'bg-[#0097a7]/10', textColor: 'text-[#0097a7]', icon: Package },
   'out_for_delivery': { labelKey: 'outForDelivery', color: 'bg-amber-500', bgColor: 'bg-amber-50', textColor: 'text-amber-700', icon: Truck },
   'delivered': { labelKey: 'delivered', color: 'bg-green-500', bgColor: 'bg-green-50', textColor: 'text-green-700', icon: CheckCircle },
   'cancelled': { labelKey: 'cancelled', color: 'bg-red-500', bgColor: 'bg-red-50', textColor: 'text-red-700', icon: XCircle },
@@ -386,7 +386,7 @@ export default function OrderDetailPage() {
                     <div className={`h-10 w-10 rounded-xs flex items-center justify-center transition-all ${step.completed
                       ? 'bg-gradient-to-br from-green-400 to-green-500 text-white'
                       : step.current
-                        ? 'bg-gradient-to-br from-[#b18b5e] to-[#8c6b42] text-white ring-4 ring-[#b18b5e]/20'
+                        ? 'bg-gradient-to-br from-[#00bcd4] to-[#0097a7] text-white ring-4 ring-[#00bcd4]/20'
                         : 'bg-gray-100 text-gray-400'
                       }`}>
                       {step.completed ? (
@@ -547,7 +547,7 @@ export default function OrderDetailPage() {
         }
 
         {/* Help Section */}
-        <Card className="border-b bg-gradient-to-br from-[#b18b5e]/10 to-[#8c6b42]/5">
+        <Card className="border-b bg-gradient-to-br from-[#00bcd4]/10 to-[#0097a7]/5">
           <CardContent className="p-6">
             <div className="flex items-start gap-4">
               <div className="h-12 w-12 bg-white rounded-xs flex items-center justify-center shrink-0">
@@ -586,7 +586,7 @@ export default function OrderDetailPage() {
             </Button>
           )}
           <Link href="/products" className="flex-1">
-            <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#b18b5e] to-[#8c6b42] hover:from-[#b18b5e]/90 hover:to-[#8c6b42]/90 rounded-xs">
+            <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#00bcd4] to-[#0097a7] hover:from-[#00bcd4]/90 hover:to-[#0097a7]/90 rounded-xs">
               <Sparkles className="h-5 w-5" />
               {t('shopAgain', language)}
             </Button>
@@ -608,7 +608,7 @@ export default function OrderDetailPage() {
                 {t('cancel', language)}
               </Button>
               <Link href="/products" className="flex-1">
-                <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#b18b5e] to-[#8c6b42] rounded-xs">
+                <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#00bcd4] to-[#0097a7] rounded-xs">
                   <Sparkles className="h-5 w-5" />
                   {t('shopAgain', language)}
                 </Button>
@@ -616,7 +616,7 @@ export default function OrderDetailPage() {
             </>
           ) : (
             <Link href="/products" className="flex-1">
-              <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#b18b5e] to-[#8c6b42] rounded-xs">
+              <Button className="w-full h-12 gap-2 bg-gradient-to-r from-[#00bcd4] to-[#0097a7] rounded-xs">
                 <Sparkles className="h-5 w-5" />
                 {t('shopAgain', language)}
               </Button>
@@ -638,7 +638,7 @@ export default function OrderDetailPage() {
             <AlertDialogDescription className="text-center">
               {t('cancelOrderConfirmation', language)}
               {order.payment_status === 'captured' && (
-                <span className="block mt-3 p-3 bg-[#b18b5e]/10 rounded-xs text-[#8c6b42] text-sm">
+                <span className="block mt-3 p-3 bg-[#00bcd4]/10 rounded-xs text-[#0097a7] text-sm">
                   {t('paymentRefundInfo', language)}
                 </span>
               )}

@@ -151,7 +151,7 @@ export default function ZoneDeliveryDemoPage() {
                                 <textarea
                                     value={address}
                                     onChange={(e) => setAddress(e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b18b5e] resize-none"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00bcd4] resize-none"
                                     placeholder="e.g., 123 Anna Salai, T Nagar, Chennai, Tamil Nadu 600017"
                                     rows={3}
                                     onKeyDown={(e) => {
@@ -167,7 +167,7 @@ export default function ZoneDeliveryDemoPage() {
                                 <button
                                     onClick={handleCheckZone}
                                     disabled={loading}
-                                    className="flex-1 bg-[#b18b5e] text-white py-2 px-4 rounded-md hover:bg-[#8c6b42] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-medium"
+                                    className="flex-1 bg-[#00bcd4] text-white py-2 px-4 rounded-md hover:bg-[#0097a7] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-medium"
                                 >
                                     {loading ? "Checking..." : "Check Delivery Zone"}
                                 </button>
@@ -200,8 +200,8 @@ export default function ZoneDeliveryDemoPage() {
                             </div>
 
                             {detectedLocation && (
-                                <div className="bg-[#b18b5e]/10 border border-[#b18b5e]/20 rounded-md p-3">
-                                    <p className="text-sm text-[#b18b5e]">
+                                <div className="bg-[#00bcd4]/10 border border-[#00bcd4]/20 rounded-md p-3">
+                                    <p className="text-sm text-[#00bcd4]">
                                         <strong>📍 Detected:</strong> {detectedLocation}
                                     </p>
                                 </div>
@@ -284,38 +284,38 @@ export default function ZoneDeliveryDemoPage() {
                     )}
 
                     {/* Test Addresses Helper */}
-                    <div className="bg-[#b18b5e]/10 border border-[#b18b5e]/20 rounded-xs p-4">
-                        <h3 className="font-semibold text-[#3d2b1f] mb-2">
+                    <div className="bg-[#00bcd4]/10 border border-[#00bcd4]/20 rounded-xs p-4">
+                        <h3 className="font-semibold text-[#00838f] mb-2">
                             🧪 Test with Sample Chennai Addresses
                         </h3>
-                        <p className="text-sm text-[#8c6b42] mb-3">
+                        <p className="text-sm text-[#0097a7] mb-3">
                             Try these addresses to test different delivery zones:
                         </p>
                         <div className="grid gap-2 text-sm">
                             <button
                                 onClick={() => testAddress("Anna Salai, Chennai, Tamil Nadu")}
-                                className="bg-white border border-[#b18b5e]/30 rounded px-3 py-2 hover:bg-[#b18b5e]/10 text-left"
+                                className="bg-white border border-[#00bcd4]/30 rounded px-3 py-2 hover:bg-[#00bcd4]/10 text-left"
                             >
                                 <div className="font-medium">Zone A - City Center</div>
                                 <div className="text-xs text-gray-600">Anna Salai, Chennai</div>
                             </button>
                             <button
                                 onClick={() => testAddress("Adyar, Chennai, Tamil Nadu")}
-                                className="bg-white border border-[#b18b5e]/30 rounded px-3 py-2 hover:bg-[#b18b5e]/10 text-left"
+                                className="bg-white border border-[#00bcd4]/30 rounded px-3 py-2 hover:bg-[#00bcd4]/10 text-left"
                             >
                                 <div className="font-medium">Zone B - Adyar</div>
                                 <div className="text-xs text-gray-600">Adyar, Chennai</div>
                             </button>
                             <button
                                 onClick={() => testAddress("Velachery, Chennai, Tamil Nadu")}
-                                className="bg-white border border-[#b18b5e]/30 rounded px-3 py-2 hover:bg-[#b18b5e]/10 text-left"
+                                className="bg-white border border-[#00bcd4]/30 rounded px-3 py-2 hover:bg-[#00bcd4]/10 text-left"
                             >
                                 <div className="font-medium">Zone C - Velachery</div>
                                 <div className="text-xs text-gray-600">Velachery, Chennai</div>
                             </button>
                             <button
                                 onClick={() => testAddress("Tambaram, Chennai, Tamil Nadu")}
-                                className="bg-white border border-[#b18b5e]/30 rounded px-3 py-2 hover:bg-[#b18b5e]/10 text-left"
+                                className="bg-white border border-[#00bcd4]/30 rounded px-3 py-2 hover:bg-[#00bcd4]/10 text-left"
                             >
                                 <div className="font-medium">Zone D - Tambaram</div>
                                 <div className="text-xs text-gray-600">Tambaram, Chennai</div>

@@ -61,12 +61,12 @@ export default function PopularProducts() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#8c6b42]">{t('popularThisWeek', language)}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#0097a7]">{t('popularThisWeek', language)}</h2>
             <p className="text-sm text-muted-foreground">{t('mostOrderedByCustomers', language)}</p>
           </div>
           <Link
             href="/products?sort=popular"
-            className="flex items-center gap-1 text-sm font-bold text-[#b18b5e]"
+            className="flex items-center gap-1 text-sm font-bold text-[#00bcd4]"
           >
             {t('viewAll', language)}
             <ChevronRight className="h-4 w-4" />

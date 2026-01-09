@@ -68,7 +68,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
 
     if (view === 'list') {
         return (
-            <div className="group overflow-hidden transition-all bg-white py-0 border-b border-gray-200">
+            <div className="group overflow-hidden transition-all py-0 border-b border-gray-200" style={{ backgroundColor: '#effafb' }}>
                 <div className="flex flex-col sm:flex-row items-stretch">
                     {/* Image Section */}
                     <Link href={`/products/${product.handle}`} className="relative w-full sm:w-[300px] shrink-0 overflow-hidden">
@@ -94,9 +94,27 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                         <div className="flex-1 flex flex-col justify-between">
                             <div>
                                 <Link href={`/products/${product.handle}`}>
-                                    <h3 className="font-bold text-lg sm:text-xl text-[#333333] group-hover:text-[#b18b5e] transition-colors leading-tight mb-0.5">
-                                        {language === 'ta' && tamilName ? tamilName : product.title}
-                                    </h3>
+                                    {language === 'en' ? (
+                                        <div>
+                                            <h3 className="font-bold text-lg sm:text-xl text-[#333333] group-hover:text-[#00bcd4] transition-colors leading-tight">
+                                                {product.title}
+                                            </h3>
+                                            {tamilName && (
+                                                <p className="text-xs text-gray-500 leading-tight">
+                                                    {tamilName}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <div>
+                                            <h3 className="font-bold text-lg sm:text-xl text-[#333333] group-hover:text-[#00bcd4] transition-colors leading-tight">
+                                                {tamilName || product.title}
+                                            </h3>
+                                            <p className="text-xs text-gray-500 leading-tight">
+                                                {product.title}
+                                            </p>
+                                        </div>
+                                    )}
                                 </Link>
                                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
                                     <Clock className="h-4 w-4" />
@@ -128,7 +146,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                             </div>
 
                             <Button
-                                className="bg-[#b18b5e] hover:bg-[#8c6b42] text-white rounded-xs px-8 h-10 gap-2 font-black shadow-md active:scale-95 transition-all w-full sm:w-auto cursor-pointer"
+                                className="bg-[#00bcd4] hover:bg-[#0097a7] text-white rounded-xs px-8 h-10 gap-2 font-black shadow-md active:scale-95 transition-all w-full sm:w-auto cursor-pointer"
                                 disabled={isAdding || cartLoading}
                                 onClick={handleAddToCart}
                             >
@@ -151,9 +169,9 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
     // Centered Card Variant (for Today's Fresh Catch) - Minimalist Design
     if (variant === 'centered') {
         return (
-            <Card className="group overflow-hidden rounded-none border-none shadow-none transition-all bg-white flex gap-4 flex-col py-0">
-                {/* Image and Buttons Container - Stone Background */}
-                <div className="relative min-h-80 pb-16" style={{ backgroundColor: '#F5F2E8' }}>
+            <Card className="group overflow-hidden rounded-none border-none shadow-none transition-all flex gap-4 flex-col py-0" style={{ backgroundColor: '#effafb' }}>
+                {/* Image and Buttons Container */}
+                <div className="relative min-h-80 pb-16" style={{ backgroundColor: '#effafb' }}>
                     <Link href={`/products/${product.handle}`}>
                         <div className="relative aspect-square overflow-hidden p-5">
                             <div className="relative w-full h-full">
@@ -179,7 +197,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                                 handleAddToCart(e);
                             }}
                             disabled={isAdding || cartLoading}
-                            className="h-12 w-12 rounded-full text-white flex items-center justify-center" style={{ backgroundColor: '#b18b5e' }}
+                            className="h-12 w-12 rounded-full text-white flex items-center justify-center" style={{ backgroundColor: '#00bcd4' }}
                             title="Add to Cart"
                         >
                             {isAdding ? (
@@ -193,7 +211,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                         <Link
                             href={`/products/${product.handle}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="h-12 w-12 rounded-full text-white flex items-center justify-center" style={{ backgroundColor: '#b18b5e' }}
+                            className="h-12 w-12 rounded-full text-white flex items-center justify-center" style={{ backgroundColor: '#00bcd4' }}
                             title="Quick View"
                         >
                             <Eye className="h-5 w-5" />
@@ -207,7 +225,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                                 toggleWishlist(product.id);
                             }}
                             className="h-12 w-12 rounded-full flex items-center justify-center text-white"
-                            style={{ backgroundColor: isWishlisted ? '#ef4444' : '#b18b5e' }}
+                            style={{ backgroundColor: isWishlisted ? '#ef4444' : '#00bcd4' }}
                             title={isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}
                         >
                             <Heart className={`h-5 w-5 ${isWishlisted ? 'fill-current' : ''}`} />
@@ -215,19 +233,32 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
                     </div>
                 </div>
 
-                {/* Text Area - White Background */}
-                <CardContent className="pb-4 px-0 flex flex-col gap-3 bg-white">
+                {/* Text Area - Card Background */}
+                <CardContent className="pb-4 px-0 flex flex-col gap-3">
                     <div>
                         <Link href={`/products/${product.handle}`}>
-                            <h3 className="font-semibold text-lg text-black transition-colors leading-tight group-hover:text-[#b18b5e]">
-                                {product.title}
-                            </h3>
+                            {language === 'en' ? (
+                                <div>
+                                    <h3 className="font-semibold text-lg text-black transition-colors leading-tight group-hover:text-[#00bcd4]">
+                                        {product.title}
+                                    </h3>
+                                    {tamilName && (
+                                        <p className="text-xs text-gray-500 mt-1">
+                                            {tamilName}
+                                        </p>
+                                    )}
+                                </div>
+                            ) : (
+                                <div>
+                                    <h3 className="font-semibold text-lg text-black transition-colors leading-tight group-hover:text-[#00bcd4]">
+                                        {tamilName || product.title}
+                                    </h3>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        {product.title}
+                                    </p>
+                                </div>
+                            )}
                         </Link>
-                        {tamilName && (
-                            <p className="text-xs text-gray-500 mt-1">
-                                {tamilName}
-                            </p>
-                        )}
                     </div>
 
                     {/* 5 Outlined Stars */}
@@ -253,7 +284,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
 
     // Grid View (Default)
     return (
-        <Card className="group overflow-hidden rounded-2xl border-none bg-white flex flex-col py-0">
+        <Card className="group overflow-hidden rounded-2xl border-none flex flex-col py-0" style={{ backgroundColor: '#effafb' }}>
             <Link href={`/products/${product.handle}`}>
                 <div className="relative aspect-[16/8] sm:aspect-[16/7] overflow-hidden py-0">
                     <Image
@@ -287,12 +318,28 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
 
             <CardContent className="p-2.5 sm:p-3.5 pt-1.5 flex flex-col">
                 <Link href={`/products/${product.handle}`} className="flex flex-col">
-                    {/* Main Title - Language Switched */}
-                    <div className="mb-1.5">
-                        <h3 className="font-bold text-sm sm:text-base leading-tight text-[#333333] group-hover:text-primary transition-colors line-clamp-1">
-                            {language === 'ta' && tamilName ? tamilName : product.title}
-                        </h3>
-                    </div>
+                    {/* Main Title - Bilingual Display */}
+                    {language === 'en' ? (
+                        <div className="mb-1.5">
+                            <h3 className="font-bold text-sm sm:text-base leading-tight text-[#333333] group-hover:text-primary transition-colors line-clamp-1">
+                                {product.title}
+                            </h3>
+                            {tamilName && (
+                                <p className="text-xs text-gray-500 leading-tight line-clamp-1">
+                                    {tamilName}
+                                </p>
+                            )}
+                        </div>
+                    ) : (
+                        <div className="mb-1.5">
+                            <h3 className="font-bold text-sm sm:text-base leading-tight text-[#333333] group-hover:text-primary transition-colors line-clamp-1">
+                                {tamilName || product.title}
+                            </h3>
+                            <p className="text-xs text-gray-500 leading-tight line-clamp-1">
+                                {product.title}
+                            </p>
+                        </div>
+                    )}
 
                     {/* Meta Row - Combined Rating & Freshness */}
                     <div className="flex gap-3 mb-3">

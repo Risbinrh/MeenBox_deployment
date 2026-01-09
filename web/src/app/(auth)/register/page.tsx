@@ -130,7 +130,7 @@ function RegisterForm() {
               {language === 'en' ? `Welcome, ${formData.first_name}!` : `வரவேற்கிறோம், ${formData.first_name}!`}
             </h2>
             <p className="text-muted-foreground mb-6">{t('accountCreatedSuccessfully', language)}</p>
-            <div className="flex items-center justify-center gap-2 text-[#b18b5e]">
+            <div className="flex items-center justify-center gap-2 text-[#00bcd4]">
               <Loader2 className="h-5 w-5 animate-spin" />
               <span className="text-sm">{t('settingUpAccount', language)}</span>
             </div>
@@ -153,7 +153,7 @@ function RegisterForm() {
         <div className="z-10">
           {/* <Link href="/" className="inline-block">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Meen Box"
               width={180}
               height={60}
@@ -206,7 +206,7 @@ function RegisterForm() {
                     placeholder="First"
                     value={formData.first_name}
                     onChange={handleChange}
-                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -220,7 +220,7 @@ function RegisterForm() {
                     placeholder="Last"
                     value={formData.last_name}
                     onChange={handleChange}
-                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -237,7 +237,7 @@ function RegisterForm() {
                   placeholder="Enter Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                   disabled={isSubmitting}
                 />
               </div>
@@ -253,7 +253,7 @@ function RegisterForm() {
                   placeholder="10 digit number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                   maxLength={10}
                   disabled={isSubmitting}
                 />
@@ -270,7 +270,7 @@ function RegisterForm() {
                   placeholder="Min 8 chars"
                   value={formData.password}
                   onChange={handleChange}
-                  className="pl-10 pr-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                  className="pl-10 pr-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                   disabled={isSubmitting}
                 />
                 <button
@@ -293,7 +293,7 @@ function RegisterForm() {
                   placeholder="Re-enter password"
                   value={formData.confirm_password}
                   onChange={handleChange}
-                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                  className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                   disabled={isSubmitting}
                 />
               </div>
@@ -301,7 +301,7 @@ function RegisterForm() {
 
             <Button
               type="submit"
-              className="w-full h-11 text-base font-medium bg-[#b18b5e] hover:bg-[#8c6b42] text-white rounded-xs shadow-md transition-all active:scale-[0.98]"
+              className="w-full h-11 text-base font-medium bg-[#00bcd4] hover:bg-[#0097a7] text-white rounded-xs shadow-md transition-all active:scale-[0.98]"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
@@ -316,11 +316,11 @@ function RegisterForm() {
 
             <p className="text-xs text-center text-gray-500">
               {t('byCreatingAccount', language)}{' '}
-              <Link href="/terms" className="text-[#b18b5e] hover:underline">
+              <Link href="/terms" className="text-[#00bcd4] hover:underline">
                 {t('terms', language)}
               </Link>{' '}
               {t('and', language)}{' '}
-              <Link href="/privacy" className="text-[#b18b5e] hover:underline">
+              <Link href="/privacy" className="text-[#00bcd4] hover:underline">
                 {t('privacyPolicy', language)}
               </Link>
             </p>
@@ -335,7 +335,7 @@ function RegisterForm() {
             </div>
 
             <Link href="/login" className="block">
-              <Button variant="outline" className="w-full h-11 text-base font-medium rounded-xs border-2 border-gray-200 hover:border-[#b18b5e] hover:bg-[#b18b5e]/5 text-gray-700 hover:text-[#b18b5e] transition-all">
+              <Button variant="outline" className="w-full h-11 text-base font-medium rounded-xs border-2 border-gray-200 hover:border-[#00bcd4] hover:bg-[#00bcd4]/5 text-gray-700 hover:text-[#00bcd4] transition-all">
                 {t('signIn', language)}
               </Button>
             </Link>
@@ -349,8 +349,8 @@ function RegisterForm() {
 export default function RegisterPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-[#b18b5e]/5 via-[#F5F2E8] to-white flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-[#b18b5e]" />
+      <div className="min-h-screen bg-gradient-to-br from-[#00bcd4]/5 via-[#e0f7fa] to-white flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-[#00bcd4]" />
       </div>
     }>
       <RegisterForm />

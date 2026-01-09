@@ -27,7 +27,7 @@ export default function LanguageDropdown() {
                 <Button
                     variant="ghost"
                     size="sm"
-                    className="h-auto py-0 px-2 hover:text-white text-muted-foreground hover:bg-[#b18b5e] rounded-xs"
+                    className="h-auto py-0 px-2 hover:text-white text-muted-foreground hover:bg-[#00bcd4] rounded-xs"
                 >
                     <Languages className="h-3.5 w-3.5 mr-1" />
                     <span className="text-sm font-medium">
@@ -40,7 +40,7 @@ export default function LanguageDropdown() {
                     <DropdownMenuItem
                         key={lang.code}
                         onClick={() => setLanguage(lang.code)}
-                        className={`cursor-pointer focus:bg-[#b18b5e] focus:text-white rounded-xs ${language === lang.code ? 'bg-[#b18b5e] text-white' : ''
+                        className={`cursor-pointer focus:bg-[#00bcd4] focus:text-white rounded-xs ${language === lang.code ? 'bg-[#00bcd4] text-white' : ''
                             }`}
                     >
                         <span className="flex items-center justify-between w-full">

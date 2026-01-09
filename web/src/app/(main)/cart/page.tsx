@@ -492,7 +492,7 @@ export default function CartPage() {
                     <span>{t('secureCheckout', language)}</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <Truck className="h-4 w-4 text-[#b18b5e]" />
+                    <Truck className="h-4 w-4 text-[#00bcd4]" />
                     <span>{t('fastDelivery', language)}</span>
                   </div>
                 </div>

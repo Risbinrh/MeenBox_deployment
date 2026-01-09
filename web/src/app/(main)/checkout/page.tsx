@@ -49,7 +49,7 @@ const deliverySlots = [
 const paymentMethods = [
   { id: 'cod', name: 'Cash on Delivery', tamilName: 'பணம் டெலிவரியில்', descKey: 'payWhenReceive', icon: Banknote, color: 'text-orange-600', bgColor: 'bg-orange-50' },
   { id: 'upi', name: 'UPI Payment', tamilName: 'UPI கட்டணம்', descKey: 'upiDescription', icon: Wallet, color: 'text-purple-600', bgColor: 'bg-purple-50' },
-  { id: 'card', name: 'Credit/Debit Card', tamilName: 'கிரெடிட்/டெபிட் கார்டு', descKey: 'cardDescription', icon: CreditCard, color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
+  { id: 'card', name: 'Credit/Debit Card', tamilName: 'கிரெடிட்/டெபிட் கார்டு', descKey: 'cardDescription', icon: CreditCard, color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
 ];
 
 // Helper function to get product name in the correct language
@@ -415,18 +415,18 @@ export default function CheckoutPage() {
 
               <CardContent className="p-5 space-y-4">
                 {/* Delivery Info */}
-                <div className="flex items-start gap-4 p-4 bg-[#b18b5e]/10 rounded-xs">
-                  <div className="h-10 w-10 bg-[#b18b5e]/20 rounded-xs flex items-center justify-center shrink-0">
-                    <Truck className="h-5 w-5 text-[#b18b5e]" />
+                <div className="flex items-start gap-4 p-4 bg-[#00bcd4]/10 rounded-xs">
+                  <div className="h-10 w-10 bg-[#00bcd4]/20 rounded-xs flex items-center justify-center shrink-0">
+                    <Truck className="h-5 w-5 text-[#00bcd4]" />
                   </div>
                   <div className="flex-1">
-                    <p className="font-semibold text-[#3d2b1f]">{t('deliveryScheduled', language)}</p>
-                    <p className="text-[#8c6b42]">
+                    <p className="font-semibold text-[#00838f]">{t('deliveryScheduled', language)}</p>
+                    <p className="text-[#0097a7]">
                       {selectedDate === 'today' ? t('today', language) : t('tomorrow', language)}, {language === 'ta' ? selectedSlotInfo?.tamilTime : selectedSlotInfo?.time}
                     </p>
                     <div className="flex items-center gap-1 mt-1">
                       <span className="text-xl">{selectedSlotInfo?.icon}</span>
-                      <span className="text-sm text-[#b18b5e]">{language === 'ta' ? selectedSlotInfo?.tamilName : selectedSlotInfo?.name}</span>
+                      <span className="text-sm text-[#00bcd4]">{language === 'ta' ? selectedSlotInfo?.tamilName : selectedSlotInfo?.name}</span>
                     </div>
                   </div>
                 </div>
@@ -736,9 +736,9 @@ export default function CheckoutPage() {
 
             {/* Step 2: Delivery Time */}
             <Card className="overflow-hidden">
-              <CardHeader className="bg-gradient-to-r from-[#b18b5e]/10 to-transparent pb-4">
+              <CardHeader className="bg-gradient-to-r from-[#00bcd4]/10 to-transparent pb-4">
                 <CardTitle className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-xs bg-[#b18b5e] text-white flex items-center justify-center text-sm font-bold">
+                  <div className="h-8 w-8 rounded-xs bg-[#00bcd4] text-white flex items-center justify-center text-sm font-bold">
                     <Clock className="h-4 w-4" />
                   </div>
                   <span>{t('deliveryTime', language)}</span>

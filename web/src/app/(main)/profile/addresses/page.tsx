@@ -176,7 +176,7 @@ export default function AddressesPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white pb-6">
-        <div className="bg-[#b18b5e]/5 border-b">
+        <div className="bg-[#00bcd4]/5 border-b">
           <div className="container mx-auto px-4 py-4">
             <Skeleton className="h-4 w-24 mb-2" />
             <Skeleton className="h-6 w-40" />
@@ -210,9 +210,9 @@ export default function AddressesPage() {
   return (
     <div className="min-h-screen bg-white pb-6">
       {/* Header */}
-      <div className="bg-[#b18b5e]/5 border-b">
+      <div className="bg-[#00bcd4]/5 border-b">
         <div className="container mx-auto px-4 py-4">
-          <Link href="/profile" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-[#b18b5e] mb-2">
+          <Link href="/profile" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-[#00bcd4] mb-2">
             <ChevronLeft className="h-4 w-4" />
             Back to Profile
           </Link>
@@ -248,11 +248,11 @@ export default function AddressesPage() {
               <Card key={address.id}>
                 <CardContent className="p-4">
                   <div className="flex items-start gap-3">
-                    <div className="h-10 w-10 rounded-full bg-[#b18b5e]/10 flex items-center justify-center shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-[#00bcd4]/10 flex items-center justify-center shrink-0">
                       {index === 0 ? (
-                        <Home className="h-5 w-5 text-[#b18b5e]" />
+                        <Home className="h-5 w-5 text-[#00bcd4]" />
                       ) : (
-                        <Building className="h-5 w-5 text-[#b18b5e]" />
+                        <Building className="h-5 w-5 text-[#00bcd4]" />
                       )}
                     </div>
                     <div className="flex-1">

@@ -82,7 +82,7 @@ function LoginForm() {
         <Card className="w-full max-w-md text-center border-0 shadow-none bg-transparent">
           <CardContent className="py-12">
             <div className="relative inline-block mb-6">
-              <div className="h-24 w-24 mx-auto bg-[#b18b5e] rounded-full flex items-center justify-center shadow-lg">
+              <div className="h-24 w-24 mx-auto bg-[#00bcd4] rounded-full flex items-center justify-center shadow-lg">
                 <CheckCircle className="h-12 w-12 text-white" />
               </div>
               <div className="absolute -top-2 -right-2 text-3xl animate-bounce">
@@ -115,7 +115,7 @@ function LoginForm() {
           {/* <Link href="/" className="inline-block">
             <div className="">
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Meen Box"
                 width={180}
                 height={60}
@@ -145,7 +145,7 @@ function LoginForm() {
           <div className="text-center">
             <Link href="/" className="lg:hidden inline-flex items-center justify-center gap-2 mb-8">
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Meen Box"
                 width={120}
                 height={40}
@@ -179,7 +179,7 @@ function LoginForm() {
                     placeholder="Enter Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                    className="pl-10 h-11 rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -195,7 +195,7 @@ function LoginForm() {
                     placeholder={t('passwordPlaceholder', language)}
                     value={formData.password}
                     onChange={handleChange}
-                    className="pl-10 pr-10 h-11  rounded-xs border-gray-300 focus:border-[#b18b5e] focus:ring-[#b18b5e] bg-gray-50/50"
+                    className="pl-10 pr-10 h-11  rounded-xs border-gray-300 focus:border-[#00bcd4] focus:ring-[#00bcd4] bg-gray-50/50"
                     disabled={isSubmitting}
                   />
                   <button
@@ -211,7 +211,7 @@ function LoginForm() {
 
             <Button
               type="submit"
-              className="w-full h-11 rounded-xs text-base font-medium bg-[#b18b5e] hover:bg-[#8c6b42] text-white  shadow-md transition-all active:scale-[0.98]"
+              className="w-full h-11 rounded-xs text-base font-medium bg-[#00bcd4] hover:bg-[#0097a7] text-white  shadow-md transition-all active:scale-[0.98]"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
@@ -237,7 +237,7 @@ function LoginForm() {
           </div>
 
           <Link href="/register" className="block">
-            <Button variant="outline" className="w-full h-11 rounded-xs text-base font-medium  border-2 border-gray-200 hover:border-[#b18b5e] hover:bg-[#b18b5e]/5 text-gray-700 hover:text-[#b18b5e] transition-all">
+            <Button variant="outline" className="w-full h-11 rounded-xs text-base font-medium  border-2 border-gray-200 hover:border-[#00bcd4] hover:bg-[#00bcd4]/5 text-gray-700 hover:text-[#00bcd4] transition-all">
               {t('createAccount', language)}
             </Button>
           </Link>
@@ -250,8 +250,8 @@ function LoginForm() {
 export default function LoginPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-[#b18b5e]/5 via-[#F5F2E8] to-white flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-[#b18b5e]" />
+      <div className="min-h-screen bg-gradient-to-br from-[#00bcd4]/5 via-[#e0f7fa] to-white flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-[#00bcd4]" />
       </div>
     }>
       <LoginForm />

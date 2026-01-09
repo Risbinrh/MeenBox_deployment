@@ -358,7 +358,7 @@ function ProfilePageContent() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white pb-24 lg:pb-8">
-        <div className="bg-gradient-to-r from-[#b18b5e] via-[#b18b5e]/95 to-[#b18b5e]/90">
+        <div className="bg-gradient-to-r from-[#00bcd4] via-[#00bcd4]/95 to-[#00bcd4]/90">
           <div className="container mx-auto px-4 py-8">
             <div className="flex items-center gap-4">
               <Skeleton className="h-20 w-20 rounded-full bg-white/20" />
@@ -388,8 +388,8 @@ function ProfilePageContent() {
       <div className="min-h-screen bg-white flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md text-center">
           <CardContent className="py-12">
-            <div className="h-20 w-20 mx-auto bg-[#b18b5e]/10 rounded-full flex items-center justify-center mb-6">
-              <User className="h-10 w-10 text-[#b18b5e]" />
+            <div className="h-20 w-20 mx-auto bg-[#00bcd4]/10 rounded-full flex items-center justify-center mb-6">
+              <User className="h-10 w-10 text-[#00bcd4]" />
             </div>
             <h2 className="text-2xl font-bold mb-2">{t('pleaseLogin', language)}</h2>
             <p className="text-muted-foreground mb-8">{t('signInToViewOrderDetails', language)}</p>
@@ -414,11 +414,11 @@ function ProfilePageContent() {
   //   { icon: Bell, label: t('notifications', language), href: '/profile/notifications', color: 'text-amber-600', bgColor: 'bg-amber-100' },
   // ], [language, orderCount]);
   const menuItems = [
-    { id: 'profile', icon: User, label: t('myAccount', language), href: '/profile', color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
-    { id: 'orders', icon: Package, label: t('myOrders', language), href: '/orders', badge: orderCount > 0 ? `${orderCount}` : undefined, color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
-    { id: 'address', icon: MapPin, label: t('savedAddresses', language), href: '/profile/addresses', color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
-    { id: 'wishlist', icon: Heart, label: t('wishlist', language), href: '/wishlist', color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
-    { id: 'logout', icon: LogOut, label: t('logout', language), href: '#', color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10' },
+    { id: 'profile', icon: User, label: t('myAccount', language), href: '/profile', color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
+    { id: 'orders', icon: Package, label: t('myOrders', language), href: '/orders', badge: orderCount > 0 ? `${orderCount}` : undefined, color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
+    { id: 'address', icon: MapPin, label: t('savedAddresses', language), href: '/profile/addresses', color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
+    { id: 'wishlist', icon: Heart, label: t('wishlist', language), href: '/wishlist', color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
+    { id: 'logout', icon: LogOut, label: t('logout', language), href: '#', color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10' },
   ];
 
   // const settingsItems = useMemo(() => [
@@ -432,7 +432,7 @@ function ProfilePageContent() {
   return (
     <div className="min-h-screen bg-white pb-24 lg:pb-8">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#b18b5e] via-[#b18b5e]/95 to-[#8c6b42] text-white">
+      <div className="bg-gradient-to-r from-[#00bcd4] via-[#00bcd4]/95 to-[#0097a7] text-white">
         <div className="container mx-auto px-4 py-8 pb-16">
           <h1 className="text-2xl sm:text-4xl font-bold">
             {t('welcome', language)}, {customer?.first_name || 'User'}
@@ -446,8 +446,8 @@ function ProfilePageContent() {
           {/* Left Sidebar - Navigation Cards */}
           <div className="lg:sticky lg:top-24 lg:self-start">
             <Card className="p-0">
-              <h3 className="text-lg font-bold p-6 pb-2 flex items-center gap-2 text-[#3d2b1f]">
-                <User className="h-5 w-5 text-[#b18b5e]" />
+              <h3 className="text-lg font-bold p-6 pb-2 flex items-center gap-2 text-[#00838f]">
+                <User className="h-5 w-5 text-[#00bcd4]" />
                 {t('myAccount', language)}
               </h3>
 
@@ -466,24 +466,24 @@ function ProfilePageContent() {
                           setActiveSection(item.id);
                         }
                       }}
-                      className={`group flex items-center gap-4 p-4 rounded-xs transition-all hover:bg-[#b18b5e]/5 cursor-pointer ${isActive ? 'bg-[#b18b5e]/10' : ''}`}
+                      className={`group flex items-center gap-4 p-4 rounded-xs transition-all hover:bg-[#00bcd4]/5 cursor-pointer ${isActive ? 'bg-[#00bcd4]/10' : ''}`}
                     >
                       {/* Circular Icon */}
                       <div className={`relative h-12 w-12 ${item.bgColor} rounded-xs flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
                         <Icon className={`h-6 w-6 ${item.color}`} />
                         {item.badge && (
-                          <div className="absolute -top-1 -right-1 h-5 w-5 bg-[#b18b5e] rounded-xs flex items-center justify-center text-white text-xs font-bold">
+                          <div className="absolute -top-1 -right-1 h-5 w-5 bg-[#00bcd4] rounded-xs flex items-center justify-center text-white text-xs font-bold">
                             {item.badge}
                           </div>
                         )}
                       </div>
                       {/* Label */}
                       <div className="flex-1">
-                        <span className={`font-semibold text-sm ${isActive ? 'text-[#b18b5e]' : 'text-gray-900'} group-hover:text-[#b18b5e] transition-colors`}>
+                        <span className={`font-semibold text-sm ${isActive ? 'text-[#00bcd4]' : 'text-gray-900'} group-hover:text-[#00bcd4] transition-colors`}>
                           {item.label}
                         </span>
                       </div>
-                      <ChevronRight className={`h-5 w-5 ${isActive ? 'text-[#b18b5e]' : 'text-gray-400'} group-hover:text-[#b18b5e] transition-colors`} />
+                      <ChevronRight className={`h-5 w-5 ${isActive ? 'text-[#00bcd4]' : 'text-gray-400'} group-hover:text-[#00bcd4] transition-colors`} />
                     </div>
                   );
                 })}
@@ -497,8 +497,8 @@ function ProfilePageContent() {
               /* Empty State */
               <Card className="">
                 <CardContent className="py-24 text-center">
-                  <div className="h-20 w-20 mx-auto bg-[#b18b5e]/10 rounded-xs flex items-center justify-center mb-4">
-                    <User className="h-10 w-10 text-[#b18b5e]" />
+                  <div className="h-20 w-20 mx-auto bg-[#00bcd4]/10 rounded-xs flex items-center justify-center mb-4">
+                    <User className="h-10 w-10 text-[#00bcd4]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Welcome to Your Account</h3>
                   <p className="text-muted-foreground">
@@ -529,8 +529,8 @@ function ProfilePageContent() {
                 <CardContent className="space-y-6">
                   {/* Profile Avatar */}
                   <div className="flex items-center gap-6">
-                    <Avatar className="h-24 w-24 border-4 border-[#b18b5e]/10">
-                      <AvatarFallback className="bg-[#b18b5e] text-white text-3xl font-bold">
+                    <Avatar className="h-24 w-24 border-4 border-[#00bcd4]/10">
+                      <AvatarFallback className="bg-[#00bcd4] text-white text-3xl font-bold">
                         {initials}
                       </AvatarFallback>
                     </Avatar>
@@ -581,20 +581,20 @@ function ProfilePageContent() {
 
                   {/* Account Stats */}
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-[#b18b5e]/10 rounded-xs">
-                      <Package className="h-8 w-8 text-[#b18b5e] mx-auto mb-2" />
+                    <div className="text-center p-4 bg-[#00bcd4]/10 rounded-xs">
+                      <Package className="h-8 w-8 text-[#00bcd4] mx-auto mb-2" />
                       <p className="text-2xl font-bold text-gray-900">{orderCount}</p>
                       <p className="text-sm text-muted-foreground">{t('orders', language)}</p>
                     </div>
-                    <div className="text-center p-4 bg-[#b18b5e]/10 rounded-xs">
-                      <MapPin className="h-8 w-8 text-[#b18b5e] mx-auto mb-2" />
+                    <div className="text-center p-4 bg-[#00bcd4]/10 rounded-xs">
+                      <MapPin className="h-8 w-8 text-[#00bcd4] mx-auto mb-2" />
                       <p className="text-2xl font-bold text-gray-900">
                         {(customer?.addresses?.length || customer?.shipping_addresses?.length || 0)}
                       </p>
                       <p className="text-sm text-muted-foreground">{t('addresses', language)}</p>
                     </div>
-                    <div className="text-center p-4 bg-[#b18b5e]/10 rounded-xs">
-                      <Crown className="h-8 w-8 text-[#b18b5e] mx-auto mb-2" />
+                    <div className="text-center p-4 bg-[#00bcd4]/10 rounded-xs">
+                      <Crown className="h-8 w-8 text-[#00bcd4] mx-auto mb-2" />
                       <p className="text-2xl font-bold text-gray-900">{t('member', language)}</p>
                       <p className="text-sm text-muted-foreground">{t('default', language)}</p>
                     </div>
@@ -606,7 +606,7 @@ function ProfilePageContent() {
               <Card className="border-b">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Package className="h-5 w-5 text-[#b18b5e]" />
+                    <Package className="h-5 w-5 text-[#00bcd4]" />
                     {t('myOrders', language)} ({orderCount})
                   </CardTitle >
                 </CardHeader >
@@ -702,7 +702,7 @@ function ProfilePageContent() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle className="flex items-center gap-2">
-                      <MapPin className="h-5 w-5 text-[#b18b5e]" />
+                      <MapPin className="h-5 w-5 text-[#00bcd4]" />
                       {t('savedAddresses', language)}
                     </CardTitle >
                     <Button
@@ -732,8 +732,8 @@ function ProfilePageContent() {
                         {customerAddresses.map((addr, index) => (
                           <div key={addr.id || index} className="p-4 border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <div className="flex items-start gap-4">
-                              <div className="h-12 w-12 bg-[#b18b5e]/10 rounded-xs flex items-center justify-center shrink-0">
-                                <MapPin className="h-6 w-6 text-[#b18b5e]" />
+                              <div className="h-12 w-12 bg-[#00bcd4]/10 rounded-xs flex items-center justify-center shrink-0">
+                                <MapPin className="h-6 w-6 text-[#00bcd4]" />
                               </div>
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
@@ -821,8 +821,8 @@ function ProfilePageContent() {
                       </div>
                     ) : (
                       <div className="text-center py-12">
-                        <div className="h-16 w-16 mx-auto bg-[#b18b5e]/10 rounded-full flex items-center justify-center mb-4">
-                          <MapPin className="h-8 w-8 text-[#b18b5e]" />
+                        <div className="h-16 w-16 mx-auto bg-[#00bcd4]/10 rounded-full flex items-center justify-center mb-4">
+                          <MapPin className="h-8 w-8 text-[#00bcd4]" />
                         </div>
                         <p className="text-lg font-semibold mb-2">{t('noSavedAddresses', language)}</p>
                         <p className="text-muted-foreground mb-4">{t('addYourFirstAddress', language)}</p>
@@ -843,7 +843,7 @@ function ProfilePageContent() {
               <Card className="border-b">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Heart className="h-5 w-5 text-[#b18b5e] fill-current" />
+                    <Heart className="h-5 w-5 text-[#00bcd4] fill-current" />
                     {t('wishlist', language)} ({wishlistProducts.length})
                   </CardTitle >
                 </CardHeader >
@@ -874,8 +874,8 @@ function ProfilePageContent() {
                     </div>
                   ) : (
                     <div className="text-center py-12">
-                      <div className="h-16 w-16 mx-auto bg-[#b18b5e]/10 rounded-full flex items-center justify-center mb-4">
-                        <Heart className="h-8 w-8 text-[#b18b5e]" />
+                      <div className="h-16 w-16 mx-auto bg-[#00bcd4]/10 rounded-full flex items-center justify-center mb-4">
+                        <Heart className="h-8 w-8 text-[#00bcd4]" />
                       </div>
                       <p className="text-lg font-semibold mb-2">{language === 'ta' ? 'உங்கள் விருப்ப பட்டியல் காலியாக உள்ளது' : 'Your wishlist is empty'}</p>
                       <p className="text-muted-foreground mb-4">{language === 'ta' ? 'நீங்கள் விரும்பும் பொருட்களை இங்கே சேமிக்கவும்' : 'Save items you love here for later'}</p>
@@ -1160,7 +1160,7 @@ function ProfilePageContent() {
             <Button variant="outline" onClick={() => setShowEditDialog(false)} className="flex-1 h-11 rounded-xs">
               {t('cancel', language)}
             </Button>
-            <Button onClick={handleSaveProfile} disabled={isSaving} className="flex-1 h-11 rounded-xs bg-gradient-to-r from-[#b18b5e] to-[#8c6b42]">
+            <Button onClick={handleSaveProfile} disabled={isSaving} className="flex-1 h-11 rounded-xs bg-gradient-to-r from-[#00bcd4] to-[#0097a7]">
               {isSaving ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin mr-2" />
@@ -1182,7 +1182,7 @@ export default function ProfilePage() {
     <Suspense fallback={
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="animate-pulse text-center">
-          <div className="h-12 w-12 mx-auto bg-[#b18b5e]/20 rounded-full mb-4"></div>
+          <div className="h-12 w-12 mx-auto bg-[#00bcd4]/20 rounded-full mb-4"></div>
           <div className="h-4 w-32 bg-gray-200 rounded mx-auto"></div>
         </div>
       </div>

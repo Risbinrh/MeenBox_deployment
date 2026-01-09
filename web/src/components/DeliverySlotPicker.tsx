@@ -25,8 +25,8 @@ export default function DeliverySlotPicker({
                         className={`
               flex items-start gap-4 p-4 rounded-lg border-2 transition-all text-left
               ${selectedSlot === slot.id
-                                ? "border-[#b18b5e] bg-[#b18b5e]/10 text-primary"
-                                : "border-gray-200 hover:border-[#b18b5e]/50 hover:bg-[#b18b5e]/5"
+                                ? "border-[#00bcd4] bg-[#00bcd4]/10 text-primary"
+                                : "border-gray-200 hover:border-[#00bcd4]/50 hover:bg-[#00bcd4]/5"
                             }
             `}
                     >
@@ -34,7 +34,7 @@ export default function DeliverySlotPicker({
                         <div className="flex-1">
                             <div className="font-semibold text-gray-900">{slot.name}</div>
                             <div className="text-sm text-gray-600">{slot.name_tamil}</div>
-                            <div className="text-sm font-medium text-[#b18b5e] mt-1">
+                            <div className="text-sm font-medium text-[#00bcd4] mt-1">
                                 {slot.time_range}
                             </div>
                             <div className="text-xs text-gray-500 mt-1">
@@ -44,7 +44,7 @@ export default function DeliverySlotPicker({
                         {selectedSlot === slot.id && (
                             <div className="flex-shrink-0">
                                 <svg
-                                    className="w-6 h-6 text-[#b18b5e]"
+                                    className="w-6 h-6 text-[#00bcd4]"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                 >

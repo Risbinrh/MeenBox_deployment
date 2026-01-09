@@ -80,7 +80,7 @@ export default function HeroBanner() {
                   </p>
                   <Link
                     href={slide.link}
-                    className="inline-flex items-center gap-2 bg-[#b18b5e] hover:bg-[#8c6b42] text-white px-8 py-3 rounded-xs font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                    className="inline-flex items-center gap-2 bg-[#00bcd4] hover:bg-[#0097a7] text-white px-8 py-3 rounded-xs font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105"
                   >
                     {(t as any)[slide.ctaKey] || 'Shop Now'}
                     <ArrowRight className="h-5 w-5" />
@@ -114,7 +114,7 @@ export default function HeroBanner() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 ${index === currentSlide
-                ? 'w-10 h-3 bg-[#b18b5e] rounded-full'
+                ? 'w-10 h-3 bg-[#00bcd4] rounded-full'
                 : 'w-3 h-3 bg-white/50 rounded-full hover:bg-white/80'
                 }`}
               aria-label={`Go to slide ${index + 1}`}

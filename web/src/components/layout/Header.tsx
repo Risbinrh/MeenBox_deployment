@@ -48,13 +48,13 @@ export default function Header() {
             <div className="flex items-center gap-1 text-muted-foreground">
               <MapPin className="h-3.5 w-3.5" />
               <span>{t('deliveringTo', language)} </span>
-              <button className="font-medium text-[#b18b5e] hover:underline">
+              <button className="font-medium text-[#00bcd4] hover:underline">
                 {t('locationCity', language)}
               </button>
             </div>
             <div className="hidden md:flex items-center gap-4 text-muted-foreground">
-              <Link href="/orders" className="hover:text-[#b18b5e]">{t('trackOrder', language)}</Link>
-              <Link href="/help" className="hover:text-[#b18b5e]">{t('help', language)}</Link>
+              <Link href="/orders" className="hover:text-[#00bcd4]">{t('trackOrder', language)}</Link>
+              <Link href="/help" className="hover:text-[#00bcd4]">{t('help', language)}</Link>
               <LanguageDropdown />
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Meen Box"
               width={160}
               height={60}
@@ -82,13 +82,13 @@ export default function Header() {
               <Input
                 type="search"
                 placeholder={t('searchPlaceholder', language)}
-                className="w-full h-11 pl-6 pr-12 rounded-xs border-gray-200 bg-gray-50 focus-visible:ring-[#b18b5e]"
+                className="w-full h-11 pl-6 pr-12 rounded-xs border-gray-200 bg-gray-50 focus-visible:ring-[#00bcd4]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               <button
                 type="submit"
-                className="absolute right-0 top-0 h-11 w-11 rounded-xs bg-[#b18b5e] hover:bg-[#8c6b42] flex items-center justify-center transition-colors"
+                className="absolute right-0 top-0 h-11 w-11 rounded-xs bg-[#00bcd4] hover:bg-[#0097a7] flex items-center justify-center transition-colors"
               >
                 <Search className="h-4 w-4 text-white" />
               </button>
@@ -101,7 +101,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-[#b18b5e] transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-[#00bcd4] transition-colors"
               >
                 {item.name}
               </Link>
@@ -117,7 +117,7 @@ export default function Header() {
 
             {/* User */}
             <Link href={isAuthenticated ? '/profile' : '/login'}>
-              <Button variant="ghost" size="icon" className="relative rounded-xs hover:bg-[#b18b5e]">
+              <Button variant="ghost" size="icon" className="relative rounded-xs hover:bg-[#00bcd4]">
                 <User className="h-5 w-5" />
                 {isAuthenticated && (
                   <span className="absolute -top-1 -right-1 h-2 w-2 rounded-xs bg-green-500" />
@@ -127,10 +127,10 @@ export default function Header() {
 
             {/* Cart */}
             <Link href="/cart">
-              <Button variant="ghost" size="icon" className="relative rounded-xs hover:bg-[#b18b5e]">
+              <Button variant="ghost" size="icon" className="relative rounded-xs hover:bg-[#00bcd4]">
                 <ShoppingCart className="h-5 w-5" />
                 {itemCount > 0 && (
-                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center rounded-xs justify-center p-0 text-xs bg-[#b18b5e] text-white">
+                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center rounded-xs justify-center p-0 text-xs bg-[#00bcd4] text-white">
                     {itemCount > 99 ? '99+' : itemCount}
                   </Badge>
                 )}
@@ -150,13 +150,13 @@ export default function Header() {
                     <Input
                       type="search"
                       placeholder={t('search', language)}
-                      className="w-full h-11 pl-6 pr-12 rounded-full border-gray-200 bg-gray-50 focus-visible:ring-[#b18b5e]"
+                      className="w-full h-11 pl-6 pr-12 rounded-full border-gray-200 bg-gray-50 focus-visible:ring-[#00bcd4]"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                     />
                     <button
                       type="submit"
-                      className="absolute right-1 top-1 h-9 w-9 rounded-full bg-[#b18b5e] hover:bg-[#8c6b42] flex items-center justify-center transition-colors"
+                      className="absolute right-1 top-1 h-9 w-9 rounded-full bg-[#00bcd4] hover:bg-[#0097a7] flex items-center justify-center transition-colors"
                     >
                       <Search className="h-4 w-4 text-white" />
                     </button>

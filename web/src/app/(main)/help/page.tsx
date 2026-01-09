@@ -7,7 +7,7 @@ export default function HelpPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-[#b18b5e] text-white py-16 sm:py-20 text-center">
+            <section className="bg-[#00bcd4] text-white py-16 sm:py-20 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                         How can we help?
@@ -34,10 +34,10 @@ export default function HelpPage() {
                             { icon: Truck, label: 'Shipping Info', href: '#' },
                             { icon: User, label: 'My Account', href: '/profile' },
                         ].map((topic, index) => (
-                            <Card key={index} className="border shadow-none rounded-xs cursor-pointer group hover:border-[#b18b5e] transition-colors">
+                            <Card key={index} className="border shadow-none rounded-xs cursor-pointer group hover:border-[#00bcd4] transition-colors">
                                 <CardContent className="p-6 flex flex-col items-center text-center gap-3">
-                                    <div className="h-12 w-12 rounded-full bg-[#b18b5e]/10 flex items-center justify-center group-hover:bg-[#b18b5e] transition-colors">
-                                        <topic.icon className="h-6 w-6 text-[#b18b5e] group-hover:text-white transition-colors" />
+                                    <div className="h-12 w-12 rounded-full bg-[#00bcd4]/10 flex items-center justify-center group-hover:bg-[#00bcd4] transition-colors">
+                                        <topic.icon className="h-6 w-6 text-[#00bcd4] group-hover:text-white transition-colors" />
                                     </div>
                                     <span className="font-semibold text-sm sm:text-base">{topic.label}</span>
                                 </CardContent>
@@ -91,28 +91,28 @@ export default function HelpPage() {
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         <div className="p-6 rounded-xs bg-white border border-gray-100 flex flex-col items-center">
-                            <Phone className="h-8 w-8 text-[#b18b5e] mb-4" />
+                            <Phone className="h-8 w-8 text-[#00bcd4] mb-4" />
                             <h3 className="font-semibold mb-2">Call Us</h3>
                             <p className="text-sm text-gray-600 mb-4">+91 98765 43210</p>
-                            <Button variant="outline" className="w-full rounded-xs border-[#b18b5e] text-[#b18b5e] hover:bg-[#b18b5e] hover:text-white">
+                            <Button variant="outline" className="w-full rounded-xs border-[#00bcd4] text-[#00bcd4] hover:bg-[#00bcd4] hover:text-white">
                                 Call Now
                             </Button>
                         </div>
 
                         <div className="p-6 rounded-xs bg-white border border-gray-100 flex flex-col items-center">
-                            <Mail className="h-8 w-8 text-[#b18b5e] mb-4" />
+                            <Mail className="h-8 w-8 text-[#00bcd4] mb-4" />
                             <h3 className="font-semibold mb-2">Email Us</h3>
                             <p className="text-sm text-gray-600 mb-4">support@meenbox.com</p>
-                            <Button variant="outline" className="w-full rounded-xs border-[#b18b5e] text-[#b18b5e] hover:bg-[#b18b5e] hover:text-white">
+                            <Button variant="outline" className="w-full rounded-xs border-[#00bcd4] text-[#00bcd4] hover:bg-[#00bcd4] hover:text-white">
                                 Send Email
                             </Button>
                         </div>
 
                         <div className="p-6 rounded-xs bg-white border border-gray-100 flex flex-col items-center">
-                            <MessageCircle className="h-8 w-8 text-[#b18b5e] mb-4" />
+                            <MessageCircle className="h-8 w-8 text-[#00bcd4] mb-4" />
                             <h3 className="font-semibold mb-2">WhatsApp</h3>
                             <p className="text-sm text-gray-600 mb-4">Chat with Support</p>
-                            <Button variant="outline" className="w-full rounded-xs border-[#b18b5e] text-[#b18b5e] hover:bg-[#b18b5e] hover:text-white">
+                            <Button variant="outline" className="w-full rounded-xs border-[#00bcd4] text-[#00bcd4] hover:bg-[#00bcd4] hover:text-white">
                                 Chat Now
                             </Button>
                         </div>

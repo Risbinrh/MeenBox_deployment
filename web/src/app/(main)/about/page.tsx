@@ -10,7 +10,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-[#b18b5e] text-white py-16 sm:py-20">
+            <section className="bg-[#00bcd4] text-white py-16 sm:py-20">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-center">
                         {language === 'ta' ? 'மீன் கடை பற்றி' : 'About Meen Box'}
@@ -58,7 +58,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Fresh Quality */}
                         <div className="text-center">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b18b5e]/10 text-[#b18b5e] mb-4">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00bcd4]/10 text-[#00bcd4] mb-4">
                                 <Fish className="h-8 w-8" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -74,7 +74,7 @@ export default function AboutPage() {
 
                         {/* Fast Delivery */}
                         <div className="text-center">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b18b5e]/10 text-[#b18b5e] mb-4">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00bcd4]/10 text-[#00bcd4] mb-4">
                                 <Truck className="h-8 w-8" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
                         {/* Quality Assurance */}
                         <div className="text-center">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b18b5e]/10 text-[#b18b5e] mb-4">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00bcd4]/10 text-[#00bcd4] mb-4">
                                 <Shield className="h-8 w-8" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
                         {/* Customer Care */}
                         <div className="text-center">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b18b5e]/10 text-[#b18b5e] mb-4">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00bcd4]/10 text-[#00bcd4] mb-4">
                                 <Heart className="h-8 w-8" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -126,7 +126,7 @@ export default function AboutPage() {
             {/* Mission Section */}
             <section className="py-12 sm:py-16">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#b18b5e]/5 to-[#b18b5e]/10 rounded-xs p-8 sm:p-12">
+                    <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#00bcd4]/5 to-[#00bcd4]/10 rounded-xs p-8 sm:p-12">
                         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
                             {language === 'ta' ? 'எங்கள் இலக்கு' : 'Our Mission'}
                         </h2>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="/products"
-                            className="inline-flex items-center justify-center px-8 py-3 bg-[#b18b5e] text-white font-semibold rounded-xs hover:bg-[#8c6b42] transition-colors"
+                            className="inline-flex items-center justify-center px-8 py-3 bg-[#00bcd4] text-white font-semibold rounded-xs hover:bg-[#0097a7] transition-colors"
                         >
                             {t('browseProducts', language)}
                         </a>

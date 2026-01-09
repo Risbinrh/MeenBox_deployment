@@ -304,7 +304,7 @@ export default function ProductDetailPage() {
           {/* Product Images */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div className="relative aspect-[4/3] rounded-xs overflow-hidden bg-gradient-to-br from-[#b18b5e]/5 via-[#f3e9dc]/20 to-[#8c6b42]/5">
+            <div className="relative aspect-[4/3] rounded-xs overflow-hidden bg-gradient-to-br from-[#00bcd4]/5 via-[#e0f7fa]/20 to-[#0097a7]/5">
               <Image
                 src={images[selectedImage]}
                 alt={product.title}
@@ -485,8 +485,8 @@ export default function ProductDetailPage() {
             {/* Features Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="text-center p-3 bg-white rounded-xs ">
-                <div className="h-10 w-10 mx-auto bg-[#b18b5e]/10 rounded-xs flex items-center justify-center mb-2">
-                  <Truck className="h-5 w-5 text-[#b18b5e]" />
+                <div className="h-10 w-10 mx-auto bg-[#00bcd4]/10 rounded-xs flex items-center justify-center mb-2">
+                  <Truck className="h-5 w-5 text-[#00bcd4]" />
                 </div>
                 <p className="text-xs font-semibold">{t('freeDelivery', language)}</p>
                 <p className="text-xs text-muted-foreground">{t('onOrdersAbove', language)}</p>
@@ -506,8 +506,8 @@ export default function ProductDetailPage() {
                 <p className="text-xs text-muted-foreground">{language === 'ta' ? 'கையால் தேர்ந்தெடுக்கப்பட்டது' : 'Handpicked'}</p>
               </div>
               <div className="text-center p-3 bg-white rounded-xs ">
-                <div className="h-10 w-10 mx-auto bg-[#b18b5e]/10 rounded-xs flex items-center justify-center mb-2">
-                  <RotateCcw className="h-5 w-5 text-[#b18b5e]" />
+                <div className="h-10 w-10 mx-auto bg-[#00bcd4]/10 rounded-xs flex items-center justify-center mb-2">
+                  <RotateCcw className="h-5 w-5 text-[#00bcd4]" />
                 </div>
                 <p className="text-xs font-semibold">{language === 'ta' ? 'எளிய திரும்பி அனுப்புதல்' : 'Easy Returns'}</p>
                 <p className="text-xs text-muted-foreground">{language === 'ta' ? 'திருப்தி இல்லாவிட்டால்' : 'If not satisfied'}</p>
@@ -559,8 +559,8 @@ export default function ProductDetailPage() {
                   <Separator className="my-6" />
 
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="flex items-center gap-3 p-4 bg-[#b18b5e]/10 rounded-xs">
-                      <ThermometerSnowflake className="h-8 w-8 text-[#b18b5e]" />
+                    <div className="flex items-center gap-3 p-4 bg-[#00bcd4]/10 rounded-xs">
+                      <ThermometerSnowflake className="h-8 w-8 text-[#00bcd4]" />
                       <div>
                         <p className="font-semibold">{language === 'ta' ? 'சேமிப்பு' : 'Storage'}</p>
                         <p className="text-sm text-muted-foreground">{language === 'ta' ? '0-4°C இல் குளிரூட்டி வைக்கவும்' : 'Keep refrigerated at 0-4°C'}</p>
@@ -591,8 +591,8 @@ export default function ProductDetailPage() {
                       </p>
                       <p className="text-sm text-muted-foreground mt-1">{language === 'ta' ? 'கலோரிகள்' : 'Calories'}</p>
                     </div>
-                    <div className="text-center p-6 bg-gradient-to-br from-[#b18b5e]/5 to-[#8c6b42]/10 rounded-xs">
-                      <p className="text-3xl font-bold text-[#b18b5e]">
+                    <div className="text-center p-6 bg-gradient-to-br from-[#00bcd4]/5 to-[#0097a7]/10 rounded-xs">
+                      <p className="text-3xl font-bold text-[#00bcd4]">
                         {nutritionalInfo.protein}
                       </p>
                       <p className="text-sm text-muted-foreground mt-1">{language === 'ta' ? 'புரதம்' : 'Protein'}</p>
@@ -611,8 +611,8 @@ export default function ProductDetailPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 p-4 bg-[#b18b5e]/10 rounded-xs">
-                    <p className="text-sm text-[#3d2b1f]">
+                  <div className="mt-6 p-4 bg-[#00bcd4]/10 rounded-xs">
+                    <p className="text-sm text-[#00838f]">
                       <strong>{language === 'ta' ? 'ஆரோக்கிய நன்மைகள்:' : 'Health Benefits:'}</strong> {language === 'ta' ? 'உயர்தர புரதம், ஒமேகா-3 கொழுப்பு அமிலங்கள் மற்றும் அத்தியாவசிய வைட்டமின்கள் நிறைந்தது. இதய ஆரோக்கியம், மூளை செயல்பாடு மற்றும் ஒட்டுமொத்த நல்வாழ்வை ஆதரிக்கிறது.' : 'Rich in high-quality protein, omega-3 fatty acids, and essential vitamins. Supports heart health, brain function, and overall wellness.'}
                     </p>
                   </div>

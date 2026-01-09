@@ -31,8 +31,8 @@ import { t } from '@/lib/translations';
 
 const statusConfig: Record<string, { labelKey: keyof typeof import('@/lib/translations').translations.en; color: string; bgColor: string; icon: React.ElementType }> = {
   'order_placed': { labelKey: 'orderPlaced', color: 'text-amber-700', bgColor: 'bg-amber-100', icon: Clock },
-  'order_confirmed': { labelKey: 'confirmed', color: 'text-[#b18b5e]', bgColor: 'bg-[#b18b5e]/10', icon: CheckCircle },
-  'shipped': { labelKey: 'shipped', color: 'text-[#8c6b42]', bgColor: 'bg-[#8c6b42]/10', icon: Package },
+  'order_confirmed': { labelKey: 'confirmed', color: 'text-[#00bcd4]', bgColor: 'bg-[#00bcd4]/10', icon: CheckCircle },
+  'shipped': { labelKey: 'shipped', color: 'text-[#0097a7]', bgColor: 'bg-[#0097a7]/10', icon: Package },
   'out_for_delivery': { labelKey: 'outForDelivery', color: 'text-purple-700', bgColor: 'bg-purple-100', icon: Truck },
   'delivered': { labelKey: 'delivered', color: 'text-green-700', bgColor: 'bg-green-100', icon: CheckCircle },
   'cancelled': { labelKey: 'cancelled', color: 'text-red-700', bgColor: 'bg-red-100', icon: XCircle },
@@ -178,7 +178,7 @@ function OrdersContent() {
                   {order.items?.slice(0, 3).map((item, i) => (
                     <div
                       key={i}
-                      className="relative h-14 w-14 rounded-xs border-2 border-white overflow-hidden bg-gradient-to-br from-[#b18b5e]/5 to-[#b18b5e]/10"
+                      className="relative h-14 w-14 rounded-xs border-2 border-white overflow-hidden bg-gradient-to-br from-[#00bcd4]/5 to-[#00bcd4]/10"
                     >
                       <Image
                         src={item.thumbnail || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=100'}
@@ -220,7 +220,7 @@ function OrdersContent() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-[#b18b5e]">{formatPrice(order.total || 0)}</span>
+                  <span className="text-lg font-bold text-[#00bcd4]">{formatPrice(order.total || 0)}</span>
                   <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
@@ -234,7 +234,7 @@ function OrdersContent() {
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen bg-white">
-        <div className="bg-gradient-to-r from-[#b18b5e] via-[#b18b5e]/95 to-[#8c6b42] text-white">
+        <div className="bg-gradient-to-r from-[#00bcd4] via-[#00bcd4]/95 to-[#0097a7] text-white">
           <div className="container mx-auto px-4 py-8">
             <Skeleton className="h-9 w-32 mb-2 bg-white/20" />
             <Skeleton className="h-5 w-48 bg-white/20" />
@@ -278,7 +278,7 @@ function OrdersContent() {
       )}
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#b18b5e] via-[#b18b5e]/95 to-[#8c6b42] text-white">
+      <div className="bg-gradient-to-r from-[#00bcd4] via-[#00bcd4]/95 to-[#0097a7] text-white">
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center justify-between">
             <div>
@@ -306,8 +306,8 @@ function OrdersContent() {
       <div className="container mx-auto px-4 py-6">
         {!isAuthenticated ? (
           <div className="text-center py-16">
-            <div className="h-24 w-24 mx-auto bg-[#b18b5e]/10 rounded-full flex items-center justify-center mb-6">
-              <Package className="h-12 w-12 text-[#b18b5e]" />
+            <div className="h-24 w-24 mx-auto bg-[#00bcd4]/10 rounded-full flex items-center justify-center mb-6">
+              <Package className="h-12 w-12 text-[#00bcd4]" />
             </div>
             <h2 className="text-2xl font-bold mb-3">{t('pleaseLoginToViewOrders', language)}</h2>
             <p className="text-muted-foreground mb-8 text-lg">
@@ -319,8 +319,8 @@ function OrdersContent() {
           </div>
         ) : orders.length === 0 ? (
           <div className="text-center py-16">
-            <div className="h-24 w-24 mx-auto bg-[#b18b5e]/10 rounded-full flex items-center justify-center mb-6">
-              <ShoppingBag className="h-12 w-12 text-[#b18b5e]" />
+            <div className="h-24 w-24 mx-auto bg-[#00bcd4]/10 rounded-full flex items-center justify-center mb-6">
+              <ShoppingBag className="h-12 w-12 text-[#00bcd4]" />
             </div>
             <h2 className="text-2xl font-bold mb-3">{t('noOrdersYet', language)}</h2>
             <p className="text-muted-foreground mb-8 text-lg">
@@ -338,7 +338,7 @@ function OrdersContent() {
             <TabsList className="w-full justify-start mb-6 p-1 h-auto bg-transparent">
               <TabsTrigger
                 value="active"
-                className="flex-1 sm:flex-none rounded-xs px-6 py-3 data-[state=active]:bg-[#b18b5e] data-[state=active]:text-white"
+                className="flex-1 sm:flex-none rounded-xs px-6 py-3 data-[state=active]:bg-[#00bcd4] data-[state=active]:text-white"
               >
                 <div className="flex items-center gap-2">
                   <Truck className="h-4 w-4" />
@@ -352,7 +352,7 @@ function OrdersContent() {
               </TabsTrigger>
               <TabsTrigger
                 value="past"
-                className="flex-1 sm:flex-none rounded-xs px-6 py-3 data-[state=active]:bg-[#b18b5e] data-[state=active]:text-white"
+                className="flex-1 sm:flex-none rounded-xs px-6 py-3 data-[state=active]:bg-[#00bcd4] data-[state=active]:text-white"
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4" />
@@ -413,14 +413,14 @@ export default function OrdersPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-white">
-        <div className="bg-gradient-to-r from-[#b18b5e] via-[#b18b5e]/95 to-[#8c6b42] text-white">
+        <div className="bg-gradient-to-r from-[#00bcd4] via-[#00bcd4]/95 to-[#0097a7] text-white">
           <div className="container mx-auto px-4 py-8">
             <div className="h-10 w-32 bg-white/20 rounded animate-pulse" />
           </div>
         </div>
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-[#b18b5e]" />
+            <Loader2 className="h-8 w-8 animate-spin text-[#00bcd4]" />
           </div>
         </div>
       </div>

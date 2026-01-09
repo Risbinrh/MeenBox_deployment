@@ -80,9 +80,9 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300 bg-white">
+    <Card className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300" style={{ backgroundColor: '#effafb' }}>
       <Link href={`/products/${product.handle}`}>
-        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#b18b5e]/5 via-slate-50 to-[#8c6b42]/5">
+        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#00bcd4]/5 via-slate-50 to-[#0097a7]/5">
           {/* Product Image */}
           <Image
             src={product.thumbnail || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop'}
@@ -153,10 +153,28 @@ export default function ProductCard({ product }: ProductCardProps) {
             <span>{freshness}</span>
           </div>
 
-          {/* Name */}
-          <h3 className="font-bold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors mb-0.5">
-            {language === 'ta' && tamilName ? tamilName : product.title}
-          </h3>
+          {/* Name - Bilingual Display */}
+          {language === 'en' ? (
+            <div className="mb-0.5">
+              <h3 className="font-bold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
+                {product.title}
+              </h3>
+              {tamilName && (
+                <p className="text-xs text-gray-500 leading-tight line-clamp-1">
+                  {tamilName}
+                </p>
+              )}
+            </div>
+          ) : (
+            <div className="mb-0.5">
+              <h3 className="font-bold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
+                {tamilName || product.title}
+              </h3>
+              <p className="text-xs text-gray-500 leading-tight line-clamp-1">
+                {product.title}
+              </p>
+            </div>
+          )}
 
 
           {/* Rating */}

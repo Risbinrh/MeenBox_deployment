@@ -60,12 +60,12 @@ export default function FeaturedProducts() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#8c6b42]">{t('todaysMeenbox', language)}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0097a7]">{t('todaysMeenbox', language)}</h2>
             <p className="text-base text-muted-foreground mt-1">{t('caughtFreshThisMorning', language)}</p>
           </div>
           <Link
             href="/products"
-            className="flex items-center gap-1 text-sm font-bold text-[#b18b5e]"
+            className="flex items-center gap-1 text-sm font-bold text-[#00bcd4]"
           >
             {t('viewAll', language)}
             <ChevronRight className="h-4 w-4" />

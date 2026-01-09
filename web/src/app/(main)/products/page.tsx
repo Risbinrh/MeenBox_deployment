@@ -185,14 +185,14 @@ function ProductsContent() {
       <button
         onClick={() => handleCategorySelect(isAll ? 'all' : category!.handle)}
         className={`w-full text-left px-4 py-3 rounded-xs text-sm font-medium transition-all duration-200 flex items-center justify-between group ${isSelected
-          ? 'bg-gradient-to-r from-[#b18b5e] to-[#8c6b42] text-white shadow-md'
-          : 'hover:bg-[#b18b5e]/5 text-gray-700'
+          ? 'bg-gradient-to-r from-[#00bcd4] to-[#0097a7] text-white shadow-md'
+          : 'hover:bg-[#00bcd4]/5 text-gray-700'
           }`}
       >
         <span className="flex items-center gap-3">
-          <div className={`h-8 w-8 rounded-xs flex items-center justify-center transition-colors ${isSelected ? 'bg-white/20' : 'bg-[#b18b5e]/10 group-hover:bg-[#b18b5e]/20'
+          <div className={`h-8 w-8 rounded-xs flex items-center justify-center transition-colors ${isSelected ? 'bg-white/20' : 'bg-[#00bcd4]/10 group-hover:bg-[#00bcd4]/20'
             }`}>
-            <div className={isSelected ? 'text-white' : 'text-[#b18b5e]'}>
+            <div className={isSelected ? 'text-white' : 'text-[#00bcd4]'}>
               {getCategoryIcon(isAll ? null : category.name)}
             </div>
           </div>
@@ -214,8 +214,8 @@ function ProductsContent() {
               {/* Categories Card */}
               <div className="bg-white">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-xs bg-[#b18b5e]/10 flex items-center justify-center">
-                    <Fish className="h-4 w-4 text-[#b18b5e]" />
+                  <div className="h-8 w-8 rounded-xs bg-[#00bcd4]/10 flex items-center justify-center">
+                    <Fish className="h-4 w-4 text-[#00bcd4]" />
                   </div>
                   {t('categories', language)}
                 </h3>
@@ -228,7 +228,7 @@ function ProductsContent() {
               </div>
 
               {/* Promo Banner */}
-              <div className="bg-gradient-to-br from-[#b18b5e] to-[#8c6b42] rounded-xs p-5 text-white">
+              <div className="bg-gradient-to-br from-[#00bcd4] to-[#0097a7] rounded-xs p-5 text-white">
                 <div className="flex items-center gap-2 mb-2">
                   <Clock className="h-5 w-5" />
                   <span className="font-semibold">{t('freshDaily', language)}</span>
@@ -256,7 +256,7 @@ function ProductsContent() {
                       <Filter className="h-4 w-4" />
                       Filters
                       {selectedCategory !== 'all' && (
-                        <Badge className="ml-1 h-5 w-5 p-0 flex items-center justify-center text-xs bg-[#b18b5e] text-white">1</Badge>
+                        <Badge className="ml-1 h-5 w-5 p-0 flex items-center justify-center text-xs bg-[#00bcd4] text-white">1</Badge>
                       )}
                     </Button>
                   </SheetTrigger>
@@ -284,7 +284,7 @@ function ProductsContent() {
                 {selectedCategory !== 'all' && (
                   <Badge
                     variant="secondary"
-                    className="gap-1.5 px-2 py-1 bg-[#b18b5e]/10 text-[#b18b5e] hover:bg-[#b18b5e]/20 cursor-pointer text-xs rounded-xs"
+                    className="gap-1.5 px-2 py-1 bg-[#00bcd4]/10 text-[#00bcd4] hover:bg-[#00bcd4]/20 cursor-pointer text-xs rounded-xs"
                     onClick={() => setSelectedCategory('all')}
                   >
                     {language === 'ta' && categories.find((c) => c.handle === selectedCategory)?.metadata?.tamil_name
@@ -296,7 +296,7 @@ function ProductsContent() {
                 {searchQuery && (
                   <Badge
                     variant="secondary"
-                    className="gap-1.5 px-2 py-1 bg-[#b18b5e]/10 text-[#b18b5e] hover:bg-[#b18b5e]/20 cursor-pointer text-xs rounded-xs"
+                    className="gap-1.5 px-2 py-1 bg-[#00bcd4]/10 text-[#00bcd4] hover:bg-[#00bcd4]/20 cursor-pointer text-xs rounded-xs"
                     onClick={clearSearch}
                   >
                     "{searchQuery}"
@@ -338,7 +338,7 @@ function ProductsContent() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className={`h-7 w-7 rounded-xs transition-colors ${viewMode === 'grid' ? 'bg-[#b18b5e] text-white shadow-md hover:bg-[#8c6b42]' : 'hover:bg-[#b18b5e]/10 text-muted-foreground'}`}
+                    className={`h-7 w-7 rounded-xs transition-colors ${viewMode === 'grid' ? 'bg-[#00bcd4] text-white shadow-md hover:bg-[#0097a7]' : 'hover:bg-[#00bcd4]/10 text-muted-foreground'}`}
                     onClick={() => setViewMode('grid')}
                   >
                     <Grid3X3 className="h-3.5 w-3.5" />
@@ -346,7 +346,7 @@ function ProductsContent() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className={`h-7 w-7 rounded-xs transition-colors ${viewMode === 'list' ? 'bg-[#b18b5e] text-white shadow-md hover:bg-[#8c6b42]' : 'hover:bg-[#b18b5e]/10 text-muted-foreground'}`}
+                    className={`h-7 w-7 rounded-xs transition-colors ${viewMode === 'list' ? 'bg-[#00bcd4] text-white shadow-md hover:bg-[#0097a7]' : 'hover:bg-[#00bcd4]/10 text-muted-foreground'}`}
                     onClick={() => setViewMode('list')}
                   >
                     <LayoutList className="h-3.5 w-3.5" />

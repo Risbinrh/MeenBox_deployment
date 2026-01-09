@@ -56,7 +56,7 @@ function CategoryCarousel({ categories, products }: CategoryCarouselProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#b18b5e] mb-1">{t('shopByCategory', language)}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#00bcd4] mb-1">{t('shopByCategory', language)}</h2>
             <p className="text-sm text-muted-foreground">{t('freshCatchFromEveryCategory', language)}</p>
           </div>
 
@@ -70,7 +70,7 @@ function CategoryCarousel({ categories, products }: CategoryCarouselProps) {
               className="group block"
             >
               <div className="w-32 sm:w-40 group cursor-pointer">
-                <div className="relative aspect-square rounded-full overflow-hidden mb-4 transition-all duration-300 group-hover:-translate-y-1" style={{ backgroundColor: '#F5F2E8' }}>
+                <div className="relative aspect-square rounded-full overflow-hidden mb-4 transition-all duration-300 group-hover:-translate-y-1" style={{ backgroundColor: '#effafb' }}>
                   <div className="absolute inset-0 p-3">
                     <div className="relative w-full h-full">
                       <Image
@@ -83,7 +83,7 @@ function CategoryCarousel({ categories, products }: CategoryCarouselProps) {
                   </div>
                 </div>
                 <div className="text-center space-y-1">
-                  <h3 className="font-bold text-sm sm:text-base text-foreground group-hover:text-[#b18b5e] transition-colors">
+                  <h3 className="font-bold text-sm sm:text-base text-foreground group-hover:text-[#00bcd4] transition-colors">
                     {language === 'ta' && typeof category.metadata?.tamil_name === 'string'
                       ? category.metadata.tamil_name
                       : category.name}

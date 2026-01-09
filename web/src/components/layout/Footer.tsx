@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Meen Box"
                 width={150}
                 height={50}
@@ -53,15 +53,15 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-[#b18b5e]" />
+                <Phone className="h-4 w-4 text-[#00bcd4]" />
                 <span>+91 98765 43210</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-[#b18b5e]" />
+                <Mail className="h-4 w-4 text-[#00bcd4]" />
                 <span>support@freshcatch.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[#b18b5e]" />
+                <MapPin className="h-4 w-4 text-[#00bcd4]" />
                 {/* <span>Chennai, Tamil Nadu</span> */}
                 <span>{t('locationCity', language)}</span>
               </div>
@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {footerLinks.shop.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-[#b18b5e] transition-colors">
+                  <Link href={link.href} className="hover:text-[#00bcd4] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -88,7 +88,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {footerLinks.account.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-[#b18b5e] transition-colors">
+                  <Link href={link.href} className="hover:text-[#00bcd4] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -102,20 +102,20 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {footerLinks.info.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-[#b18b5e] transition-colors">
+                  <Link href={link.href} className="hover:text-[#00bcd4] transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="flex gap-4 mt-6">
-              <a href="#" className="hover:text-[#b18b5e] transition-colors">
+              <a href="#" className="hover:text-[#00bcd4] transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-[#b18b5e] transition-colors">
+              <a href="#" className="hover:text-[#00bcd4] transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-[#b18b5e] transition-colors">
+              <a href="#" className="hover:text-[#00bcd4] transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
