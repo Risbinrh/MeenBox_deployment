@@ -115,7 +115,7 @@ function LoginForm() {
           {/* <Link href="/" className="inline-block">
             <div className="">
               <Image
-                src="/Logo.png"
+                src="/logo.png"
                 alt="Meen Box"
                 width={180}
                 height={60}
@@ -145,7 +145,7 @@ function LoginForm() {
           <div className="text-center">
             <Link href="/" className="lg:hidden inline-flex items-center justify-center gap-2 mb-8">
               <Image
-                src="/Logo.png"
+                src="/logo.png"
                 alt="Meen Box"
                 width={120}
                 height={40}
