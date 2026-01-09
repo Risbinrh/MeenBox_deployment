@@ -26,6 +26,14 @@ COPY . .
 # Build the application
 RUN npm run build
 
+# Debug: Check what was built
+RUN echo "=== Checking build output ===" && \
+    ls -la .medusa/ && \
+    echo "=== Admin build ===" && \
+    ls -la .medusa/admin/ 2>/dev/null || echo "No admin directory" && \
+    echo "=== Server build ===" && \
+    ls -la .medusa/server/ 2>/dev/null || echo "No server directory"
+
 # Prune dev dependencies after build
 RUN npm prune --omit=dev
 
