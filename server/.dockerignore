@@ -12,7 +12,6 @@ README.md
 *.log
 .DS_Store
 dist
-.medusa
 integration-tests
 jest.config.js
 *.test.ts
