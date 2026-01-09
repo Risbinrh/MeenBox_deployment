@@ -57,9 +57,6 @@ COPY --from=builder --chown=medusa:nodejs /app/node_modules ./node_modules
 # Copy admin build to expected location
 COPY --from=builder --chown=medusa:nodejs /app/.medusa/server/public ./public
 
-# Copy source files needed at runtime
-COPY --from=builder --chown=medusa:nodejs /app/src ./src
-
 # Switch to non-root user
 USER medusa
 
