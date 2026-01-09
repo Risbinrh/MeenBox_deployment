@@ -54,6 +54,9 @@ COPY --from=builder --chown=medusa:nodejs /app/medusa-config.js ./
 COPY --from=builder --chown=medusa:nodejs /app/package*.json ./
 COPY --from=builder --chown=medusa:nodejs /app/node_modules ./node_modules
 
+# Copy admin build to expected location
+COPY --from=builder --chown=medusa:nodejs /app/.medusa/server/public ./public
+
 # Copy source files needed at runtime
 COPY --from=builder --chown=medusa:nodejs /app/src ./src
 
