@@ -60,12 +60,12 @@ COPY --from=builder --chown=medusa:nodejs /app/.medusa/server/public ./public
 # Switch to non-root user
 USER medusa
 
-# Expose the port Medusa runs on
+# Expose the port Medusa runs on (Render will set PORT env var)
 EXPOSE 9000
 
-# Health check
+# Health check (use PORT env var or default to 9000)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:9000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+  CMD node -e "const port = process.env.PORT || 9000; require('http').get('http://localhost:' + port + '/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
 
 # Start the application
 CMD ["npm", "start"]

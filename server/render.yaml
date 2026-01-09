@@ -25,8 +25,8 @@ services:
         generateValue: true
       - key: COOKIE_SECRET
         generateValue: true
-      - key: PORT
-        value: 9000
+      - key: MEDUSA_BACKEND_URL
+        sync: false
 
 databases:
   - name: meen-kadai-db
