@@ -5,7 +5,7 @@ const fs = require('fs')
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 // Determine module path: use built version if exists, otherwise source
-const builtModulePath = path.join(process.cwd(), '.medusa/server/modules/zone')
+const builtModulePath = path.join(process.cwd(), '.medusa/server/src/modules/zone')
 const sourceModulePath = './src/modules/zone'
 const modulePath = fs.existsSync(builtModulePath) ? builtModulePath : sourceModulePath
 
