@@ -153,7 +153,7 @@ function RegisterForm() {
         <div className="z-10">
           {/* <Link href="/" className="inline-block">
             <Image
-              src="/logo.png"
+              src="/new_logo.png"
               alt="Meen Box"
               width={180}
               height={60}

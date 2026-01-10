@@ -67,7 +67,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src="/new_logo.png"
               alt="Meen Box"
               width={160}
               height={60}

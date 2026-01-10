@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/logo.png"
+                src="/new_logo.png"
                 alt="Meen Box"
                 width={150}
                 height={50}
