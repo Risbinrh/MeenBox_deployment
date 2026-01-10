@@ -80,9 +80,9 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300" style={{ backgroundColor: '#effafb' }}>
+    <Card className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300">
       <Link href={`/products/${product.handle}`}>
-        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#00bcd4]/5 via-slate-50 to-[#0097a7]/5">
+        <div className="relative aspect-square overflow-hidden bg-[#effafb]">
           {/* Product Image */}
           <Image
             src={product.thumbnail || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop'}
@@ -145,7 +145,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </Link>
 
-      <CardContent className="p-4">
+      <CardContent className="p-4 bg-[#effafb]">
         <Link href={`/products/${product.handle}`}>
           {/* Category/Freshness */}
           <div className="flex items-center gap-1.5 text-xs text-primary font-medium mb-1.5">

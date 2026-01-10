@@ -68,7 +68,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
 
     if (view === 'list') {
         return (
-            <div className="group overflow-hidden transition-all py-0 border-b border-gray-200" style={{ backgroundColor: '#effafb' }}>
+            <div className="group overflow-hidden transition-all py-0 border-b border-gray-200 bg-white">
                 <div className="flex flex-col sm:flex-row items-stretch">
                     {/* Image Section */}
                     <Link href={`/products/${product.handle}`} className="relative w-full sm:w-[300px] shrink-0 overflow-hidden">
@@ -169,9 +169,9 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
     // Centered Card Variant (for Today's Fresh Catch) - Minimalist Design
     if (variant === 'centered') {
         return (
-            <Card className="group overflow-hidden rounded-none border-none shadow-none transition-all flex gap-4 flex-col py-0" style={{ backgroundColor: '#effafb' }}>
+            <Card className="group overflow-hidden rounded-none border-none shadow-none transition-all flex gap-4 flex-col py-0 bg-white">
                 {/* Image and Buttons Container */}
-                <div className="relative min-h-80 pb-16" style={{ backgroundColor: '#effafb' }}>
+                <div className="relative min-h-80 pb-16 bg-[#effafb]">
                     <Link href={`/products/${product.handle}`}>
                         <div className="relative aspect-square overflow-hidden p-5">
                             <div className="relative w-full h-full">
@@ -284,7 +284,7 @@ export default function FreshCatchCard({ product, view = 'grid', variant = 'defa
 
     // Grid View (Default)
     return (
-        <Card className="group overflow-hidden rounded-2xl border-none flex flex-col py-0" style={{ backgroundColor: '#effafb' }}>
+        <Card className="group overflow-hidden rounded-2xl border-none flex flex-col py-0 bg-white">
             <Link href={`/products/${product.handle}`}>
                 <div className="relative aspect-[16/8] sm:aspect-[16/7] overflow-hidden py-0">
                     <Image
